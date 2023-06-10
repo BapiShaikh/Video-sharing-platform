@@ -1,0 +1,12 @@
+.homepage {
+    display: flex;
+    width: 100%;
+}
+
+.allmovies {
+    width: 50%;
+}
+
+.line {
+    width: 0.1%;
+}
