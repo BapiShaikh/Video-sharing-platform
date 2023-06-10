@@ -1,0 +1,51 @@
+.allslides {
+    flex-basis: 22%;
+    height: 36vh;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.moviesname {
+    margin-left: 1em;
+}
+
+.moviesname>h3 {
+    font-size: large;
+    color: white;
+}
+
+.moviesdetails {
+    margin-left: 1.2em;
+}
+
+.moviesdetails>span {
+    font-size: x-small;
+    margin-right: 1em;
+    color: white;
+}
+
+.publisher>img {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 20px;
+}
+
+.svg {
+    color: white;
+}
+
+.svg>svg {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
