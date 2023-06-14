@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import "../style/Homepage.css"
 import Slides from './Slides'
 import Movie from './Movie';
+import Navbar from './Navbar';
 
 export default function Homepage() {
 
@@ -222,7 +223,9 @@ export default function Homepage() {
         console.log(movie, "   data[idx]")
     }
 
-    return <section className='homepage'>
+    return (
+    <>
+    <section className='homepage'>
 
         <div className='allmovies'>
             <div className='options'>
@@ -243,6 +246,7 @@ export default function Homepage() {
         <div className='line'></div>
         <Movie movie={movie} />
     </section>
-
+    </>
+    );
 
 }
