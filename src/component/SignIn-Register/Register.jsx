@@ -19,7 +19,7 @@ function Register() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (password === confirmPassword) { 
+        if (password === confirmPassword) {
             const formData = new FormData();
             formData.append('photo', photo);
             formData.append('name', name);
@@ -39,22 +39,23 @@ function Register() {
                     console.log(err)
                     window.alert(err.response.data.message);
                     navigate("/sign")
-                }) 
+                })
         } else {
-            window.alert("passwor not match with confirm password") 
+            window.alert("passwor not match with confirm password")
         }
-       
+
     }
 
-  
+
 
     return (<>
         <main className="sr_main">
             <Poster />
             <section className="register">
                 <h1 id='register_heading'>Register</h1>
-                <div style={{ margin: "3%" }}>Register to continue access pages</div>
-                <form onSubmit={handleSubmit} id="register_form">
+                <div style={{ margin: "0%" }}>Register to continue access pages</div>
+                <form className = "fileUpload"
+                onSubmit={handleSubmit} id="register_form">
                     <input type="file" name='photo' onChange={(e) => SetPhoto(e.target.files[0])} /><br />
                     <input type="text" placeholder="Name" name='name' onChange={(e) => { SetName(e.target.value) }} value={name} /><br />
                     <input type="text" placeholder="Email" name='email' onChange={(e) => { SetEmail(e.target.value) }} value={email} /><br />

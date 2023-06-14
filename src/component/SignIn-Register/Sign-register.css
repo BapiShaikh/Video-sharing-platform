@@ -7,8 +7,10 @@
 /* :::::::::::::::::poster::::::::::::::::::::::::: */
 .poster {
     width: 60%;
-    height: 100%;
-    background-color: black;    
+    height: 100vh;
+    margin: -0.5em;
+    padding: 0;
+    background-color: black;
     background-image: url("./img/images\ \(2\).jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,35 +18,47 @@
 }
 
 .poster h1 {
-    font-size: 8rem;
-    margin-top: 20%;
-    margin-left: 8%;
-    color: gold;
+    font-size: 7rem;
+    margin-top: 1.4em;
+    margin-left: 0.8em;
+    color: rgb(235, 214, 95);
+
 }
 
 .poster div {
-    font-size:50px;
+    font-size: 40px;
     color: #c4b4f8;
-    margin-left: 8%;
+    margin-left: 2.5em;
+}
+
+.registerButton {
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 6em;
+    margin-left: 4.3em;
+}
+
+.signInButton {
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 6em;
+    margin-left: 4.3em;
 }
 
 /* ::::::::::::::::::register:::::::::::::::::: */
 .register {
     background-color: rgb(18, 18, 41);
     color: white;
-    width: 40%;
+    width: 43%;
+    margin: -0.5em;
     height: 100%;
     text-align: center;
 
 }
 
-#register_form {
-    margin-top: 0.1%;
-}
-
 #register_heading {
     font-size: 45px;
-    margin-top: 20%;
+    margin-top: 8%;
     margin-bottom: 4%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -57,20 +71,24 @@
     background-color: rgb(18, 18, 41);
     border: 0px;
     border-bottom: 1px solid white;
-    
+
+}
+
+.fileUpload{
+    border-radius: 50%;
 }
 
 #register_btn {
-    margin-top: 3%;
-    margin-bottom: 6.3%;
+    margin-top: 2%;
     padding: 2% 4%;
     width: 30%;
-    height: 4vh;
+    height: 5vh;
     color: white;
     background-color: #cc89f0;
     border-radius: 30px;
     border: 0;
     cursor: pointer;
+    letter-spacing: 1px;
 }
 
 .register form {
@@ -85,11 +103,14 @@
 .signin {
     background-color: rgb(18, 18, 41);
     color: white;
-    width: 40%;
-    height: 100%;
+    width: 43%;
+    height: 100vh;
+    margin: -0.5em;
+    padding: 0;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .signin form input {
     padding: 2% 2%;
     width: 50%;
@@ -99,6 +120,7 @@
     border: 0px;
     border-bottom: 1px solid white;
 }
+
 #signin_btn {
     margin-top: 3%;
     margin-bottom: 6.3%;
