@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Upload.css";
+import { useNavigate } from 'react-router-dom';
+
 const Upload = ({ setOpen }) => {
   const [img, setImg] = useState(undefined);
   const [video, setVideo] = useState(undefined);
   const [imgPerc, setImgPerc] = useState(0);
   const [videoPerc, setVideoPerc] = useState(0);
+  
 
   return (
     <div id="container">
