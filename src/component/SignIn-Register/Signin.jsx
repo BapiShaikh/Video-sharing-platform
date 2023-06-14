@@ -14,7 +14,7 @@ function SignIn(sign) {
         formData.append("username", username);
         formData.append("password", Password);
         axios.post("http://localhost:8080/login", formData)
-        .then((res) => {
+            .then((res) => {
                 console.log(res);
                 localStorage.setItem("loginToken", res.data.token)
                 window.alert("login Sucessful");
@@ -30,8 +30,8 @@ function SignIn(sign) {
             <Poster />
             <section className="signin">
                 <form onSubmit={handelSubmit}>
-                    <h1 style={{marginTop:"311px" ,fontSize:"45px"}}>Sign In</h1>
-                    <div style={{ margin: "3%" , fontSize:"17px" }}>Sign in to continue access pages</div><br />
+                    <h1 style={{ marginTop: "180px", fontSize: "45px" }}>Sign In</h1>
+                    <div style={{ margin: "3%", fontSize: "17px" }}>Sign in to continue access pages</div><br />
                     <input type="text" placeholder="Email" name='username' onChange={(e) => { SetUsername(e.target.value) }} value={username} /><br />
                     <input type="password" placeholder="Password" name='password' onChange={(e) => { SetPassword(e.target.value) }} value={Password} /><br />
                     <button id="signin_btn" type="submit">Sign in</button>
