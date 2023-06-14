@@ -3,34 +3,15 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 const userSchema = new mongoose.Schema({
-    imgfile: {
-        type: String,
-        required: true
-    },
-    name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    phone: {
-        type: Number,
-        required: true,
-    },
-    profession: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
+    imgfile: { type: String, required: true },
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    phone: { type: Number, required: true, },
+    profession: { type: String, required: true },
+    password: { type: String, required: true },
     videoes: [{
-        video:{
-            vfile : String,
+        video: {
+            vfile: String,
             name: String,
             description: String,
             category: String,
@@ -38,10 +19,7 @@ const userSchema = new mongoose.Schema({
         }
     }],
     tokens: [{
-        token: {
-            type: String,
-            required: true
-        }
+        token: { type: String, required: tru }
     }]
 })
 
