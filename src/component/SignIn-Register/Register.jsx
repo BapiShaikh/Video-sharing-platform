@@ -20,32 +20,30 @@ function Register() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (password === confirmPassword) {
-            const formData = new FormData();
-            formData.append('photo', photo);
-            formData.append('name', name);
-            formData.append('email', email);
-            formData.append('phone', phone);
-            formData.append('profession', profession);
-            formData.append('password', password);
-            formData.append('confirmPassword', confirmPassword);
-            console.log(formData)
-            await axios.post("http://localhost:8080/register", formData)
-                .then((res) => {
-                    console.log(res);
-                    window.alert("Your Registration is Sucessfull");
-                    navigate("/signin");
-                }).catch((err) => {
-                    console.log("err is ====>" + err)
-                    console.log(err)
-                    window.alert(err.response.data.message);
-                    navigate("/sign")
-                })
+          const formData = new FormData();
+          formData.append('photo', photo);
+          formData.append('name', name);
+          formData.append('email', email);
+          formData.append('phone', phone);
+          formData.append('profession', profession);
+          formData.append('password', password);
+          formData.append('confirmPassword', confirmPassword);
+      
+          const res = await axios.post("http://localhost:5000/register", formData);
+      
+          if (res) {
+            const data = res.data;
+            console.log(data);
+            window.alert("Your Registration is Sucessfull");
+            navigate("/signin");
+          } else {
+            window.alert("Something went wrong");
+          }
         } else {
-            window.alert("passwor not match with confirm password")
+          window.alert("passwor not match with confirm password")
         }
-
-    }
-
+      
+      }
 
 
     return (<>
